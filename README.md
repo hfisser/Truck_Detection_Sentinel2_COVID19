@@ -1,4 +1,4 @@
-# Truck Detection Sentinel-2 during COVID19 crisis
+# Truck Detection with Sentinel-2 during COVID19 crisis
 This repository is designated to detecting trucks using Sentinel-2 data.
 
 It was developed during the COVID-19 crisis in order to monitor the impact of the crisis.
