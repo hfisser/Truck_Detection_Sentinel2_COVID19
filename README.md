@@ -5,4 +5,4 @@ The detection exploits the offset of different wavelengths reflected by moving o
 
 This is an example of detected trucks around Rotterdam, Netherlands. The results were vectorized.
 
-![Test](https://github.com/hfisser/Truck_Detection_Sentinel2_COVID19/blob/master/ts7_trucks.jpeg)
+![Trucks detected around Rotterdam](https://github.com/hfisser/Truck_Detection_Sentinel2_COVID19/blob/master/ts7_trucks.jpeg)
