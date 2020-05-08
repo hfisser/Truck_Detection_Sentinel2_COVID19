@@ -17,7 +17,7 @@ The detection exploits the offset of different wavelengths reflected by moving o
 - B11 > 0.05
 - B11 < 0.55
 
-Afterwards, the ratios between B02 (blue) and B03 (green) and B02 and B04 (red) are calculated and the following thresholds are applied to these ratios:
+Afterwards, the ratios between B02 (blue) and B03 (green) and B02 and B04 (red) are calculated. The following thresholds are applied to these ratios:
 
 - B2-B03-ratio > 0.05
 - B02-B04-ratio > 0.1
