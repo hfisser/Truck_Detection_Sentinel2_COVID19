@@ -13,8 +13,8 @@ The detection exploits the offset of different wavelengths reflected by moving o
 - maximum NDWI = 0.001
 - maximum NDSI = 0.0001
 - minimum B11 = 0.05
-- maximum B11 = 0.55
-&nbsp;(all must be True)
+- maximum B11 = 0.55&nbsp;
+(all must be True)
 
 Afterwards, the ratios between B02 (blue) and B03 (green) and B02 and B04 (red) are calculated and the following thresholds are applied to these ratios:
 
