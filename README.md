@@ -5,7 +5,9 @@ It was developed during the COVID-19 crisis in order to monitor the impact of th
 
 The detection exploits the offset of different wavelengths reflected by moving objects. It targets pixels where blue is higher than green and red. In the initial step, a road mask is calculated and the data is masked to these pixels. The road mask is based on NDVI, NDWI, NDSI, B11-B03-ratio and absolute thresholds of B02, B03, B04 and B11. All the following conditions must be fulfilled:
 
-- B02 && B03 && B04 > 0.04
+- B02 > 0.04
+- B03 > 0.04
+- B04 > 0.04
 - B04 < 0.15
 - B03 < 0.15
 - B02 < 0.4
