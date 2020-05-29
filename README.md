@@ -3,6 +3,8 @@ This repository is designated to detecting trucks using Sentinel-2 data.
 
 It was developed during the COVID-19 crisis in order to monitor the impact of the crisis.
 
+# Method
+
 The offset of different wavelengths that moving objects have in Sentinel-2 data causes a specific reflectance relationship in the RGB, which looks like a rainbow. The method only targets the blue part of the spectrally disassembled truck since the dominance of blue reflectance is rare over land surfaces. This blue part of the truck serves as a marker. 
 In order to reduce false positives, it is crucial to first mask areas that are definitely no trucks. High potential for confusions is given for example in shadows of buildings and snow, which are initially masked using reflectance thresholds and spectral indices. 
 
