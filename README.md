@@ -3,7 +3,10 @@ This repository is designated to detecting trucks using Sentinel-2 data.
 
 It was developed during the COVID-19 crisis in order to monitor the impact of the crisis.
 
-The detection exploits the offset of different wavelengths reflected by moving objects. It targets pixels where blue is higher than green and red. In the initial step, a road mask is calculated and the data is masked to these pixels. The road mask is based on NDVI, NDWI, NDSI, B11-B03-ratio and absolute thresholds of B02, B03, B04 and B11. All the following conditions must be fulfilled:
+The offset of different wavelengths that moving objects have in Sentinel-2 data causes a specific reflectance relationship in the RGB, which looks like a rainbow. The method only targets the blue part of the spectrally disassembled truck since the dominance of blue reflectance is rare over land surfaces. This blue part of the truck serves as a marker. 
+In order to reduce false positives, it is crucial to first mask areas that are definitely no trucks. High potential for confusions is given for example in shadows of buildings and snow, which are initially masked using reflectance thresholds and spectral indices. 
+
+In the initial step, a road mask is calculated and the data is masked to these pixels. The road mask is based on NDVI, NDWI, NDSI, B11-B03-ratio and absolute thresholds of B02, B03, B04 and B11. All following conditions must be fulfilled:
 
 - B02 > 0.04
 - B03 > 0.04
@@ -19,12 +22,14 @@ The detection exploits the offset of different wavelengths reflected by moving o
 
 Afterwards, the ratios between B02 (blue) and B03 (green) and B02 and B04 (red) are calculated. The following thresholds are applied to these ratios:
 
-- B2-B03-ratio > 0.05
+- B02-B03-ratio > 0.05
 - B02-B04-ratio > 0.1
+
+The ratio of blue (B02) and green (B03) has a less strict threshold since the blue and the green parts of the truck are next to each other and thus slightly mix.
 
 ![Method](https://github.com/hfisser/Truck_Detection_Sentinel2_COVID19/blob/master/method_neu.png)
 
-Each truck is represented by one to three pixels with value 1 in the result. In order to visualize the results they may be vectorized, which this script does not do.
+Generally, each truck is represented by one to three pixels with value 1 in the result. All connected pixels are counted as one truck. For counting and visualizing the detections the results can be vectorized, which the scripts in this repository do not do. In the presented case, this was done in QGIS.
 
 This is an example of detected trucks around Rotterdam, Netherlands. The results were vectorized.
 
