@@ -10,15 +10,15 @@ In order to reduce false positives, it is crucial to first mask areas that are d
 
 In the initial step, a road mask is calculated and the data is masked to these pixels. The road mask is based on NDVI, NDWI, NDSI, B11-B03-ratio and absolute thresholds of B02, B03, B04 and B11. All following conditions must be fulfilled:
 
-- B02 > 0.04
-- B03 > 0.04
-- B04 > 0.04
-- B04 < 0.15
+- B02 > 0.04 _avoid building shadows
+- B03 > 0.04 _""
+- B04 > 0.04 _""
+- B04 < 0.15 _avoid industry, greenhouses and other surfaces of very high reflectance
 - B03 < 0.15
-- B02 < 0.4
-- NDVI < 0.7
-- NDWI < 0.001
-- NDSI < 0.0001
+- B02 < 0.4 _be less strict with blue as we target it
+- NDVI < 0.7 _avoid vegetation but keep in mind mixed pixels
+- NDWI < 0.001 _avoid water
+- NDSI < 0.0001 _avoid snow
 - B11 > 0.05
 - B11 < 0.55
 
