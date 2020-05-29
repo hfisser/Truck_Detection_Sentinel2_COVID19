@@ -3,7 +3,7 @@ This repository is designated to detecting trucks using Sentinel-2 data.
 
 It was developed during the COVID-19 crisis in order to monitor the impact of the crisis.
 
-# Method
+## Method
 
 The offset of different wavelengths that moving objects have in Sentinel-2 data causes a specific reflectance relationship in the RGB, which looks like a rainbow. The method only targets the blue part of the spectrally disassembled truck since the dominance of blue reflectance is rare over land surfaces. This blue part of the truck serves as a marker. 
 In order to reduce false positives, it is crucial to first mask areas that are definitely no trucks. High potential for confusions is given for example in shadows of buildings and snow, which are initially masked using reflectance thresholds and spectral indices. 
@@ -33,10 +33,13 @@ The ratio of blue (B02) and green (B03) has a less strict threshold since the bl
 
 Generally, each truck is represented by one to three pixels with value 1 in the result. All connected pixels are counted as one truck. For counting and visualizing the detections the results can be vectorized, which the scripts in this repository do not do. In the presented case, this was done in QGIS.
 
+## Results: Example of detected trucks
+
 This is an example of detected trucks around Rotterdam, Netherlands. The results were vectorized.
 
 ![Trucks detected around Rotterdam](https://github.com/hfisser/Truck_Detection_Sentinel2_COVID19/blob/master/ts7_trucks.jpeg)
 
+##  Results: Comparison before vs. during COVID-19 by weekday
 Here, you see truck count trajectories detected in the Ruhr area in Germany, grouped by weekday.
 
-![Truck count by weekday before and during COVID19](https://github.com/hfisser/Truck_Detection_Sentinel2_COVID19/blob/master/results.png)
+![Truck count by weekday before and during COVID-19](https://github.com/hfisser/Truck_Detection_Sentinel2_COVID19/blob/master/results.png)
