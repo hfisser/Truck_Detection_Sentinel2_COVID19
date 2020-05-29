@@ -34,3 +34,7 @@ Generally, each truck is represented by one to three pixels with value 1 in the 
 This is an example of detected trucks around Rotterdam, Netherlands. The results were vectorized.
 
 ![Trucks detected around Rotterdam](https://github.com/hfisser/Truck_Detection_Sentinel2_COVID19/blob/master/ts7_trucks.jpeg)
+
+Here, you see truck count trajectories detected in the Ruhr area in Germany, grouped by weekday.
+
+![Truck count by weekday before and during COVID19](https://github.com/hfisser/Truck_Detection_Sentinel2_COVID19/blob/master/results.png)
