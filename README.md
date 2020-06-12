@@ -1,7 +1,5 @@
 # Truck Detection with Sentinel-2 during COVID-19 crisis
 
--Mozilla Public License 2.0-
-
 This repository is designated to detecting trucks using Sentinel-2 data.
 It was developed during the COVID-19 crisis in order to monitor the impact of the crisis.
 
